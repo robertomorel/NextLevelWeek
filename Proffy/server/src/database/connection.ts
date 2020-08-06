@@ -1,3 +1,10 @@
+/**
+ * -----------------------------------------------------------------------------
+ *  Conexão com o Banco de Dados SQLITE com o Knex
+ *     Observações:
+ *       useNullAsDefault - para jogar null nos campos sem valor
+ * -----------------------------------------------------------------------------
+ */
 import knex from 'knex';
 import path from 'path';
 

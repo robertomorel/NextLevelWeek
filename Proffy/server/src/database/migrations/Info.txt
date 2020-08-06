@@ -1,0 +1,13 @@
+> Migration: controlam a versão do banco de dados
+    - Auxilia em trabalho em equipe
+    - Facilita no momento de fazer ajustes no DB, até mesmo sem se preocupar com os dados
+
+> Como configurar com o Knex?
+    - Configurar o arquivo knexfile.ts
+    - Criar as migrations
+    - Rodar "knex --knexfile knexfile.ts migrate:latest"
+    - Para testar:
+        -- Instalar a extensão SQLITE
+        -- Ctrl + Shift + P
+            -> Open Database
+            -> Escolher o DB

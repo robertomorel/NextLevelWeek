@@ -1,3 +1,13 @@
+/**
+ * -----------------------------------------------------------------------------
+ *  Para que o Knex possa executar sem problemas com o Typescript
+ *     Observações:
+ *       connection - localização do DB para conexão
+ *       migrations - localização das migrations
+ *       seeds      - localização dos seeds (para criar registros automatic.)
+ *       useNullAsDefault - para jogar null nos campos sem valor
+ * -----------------------------------------------------------------------------
+ */
 import path from 'path';
 
 module.exports = {
