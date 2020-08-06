@@ -117,6 +117,7 @@ class ClassesController {
 
       return response.status(201).send();
     } catch (err) {
+      console.log(err);
       // -- Desfaz qlqr alteração que pode ter havido no banco
       await trx.rollback();
 
