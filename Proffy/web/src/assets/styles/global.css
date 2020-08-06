@@ -1,0 +1,89 @@
+:root {
+  --color-background: #f0f0f7;
+  --color-primary-lighter: #9871f5;
+  --color-primary-light: #916bea;
+  --color-primary: #8257e5;
+  --color-primary-dark: #774dd6;
+  --color-primary-darker: #6842c2;
+  --color-secondary: #04d361;
+  --color-secondary-dark: #04bf58;
+  --color-title-in-primary: #ffffff;
+  --color-text-in-primary: #d4c2ff;
+  --color-text-title: #32264d;
+  --color-text-complement: #9c98a6;
+  --color-text-base: #6a6180;
+  --color-line-in-white: #e6e6f0;
+  --color-input-background: #f8f8fc;
+  --color-button-text: #ffffff;
+  --color-box-base: #ffffff;
+  --color-box-footer: #fafafc;
+
+  /* 
+    O tamanho padrão de fonte das aplicações é de 16px. 
+    Dizer que a fonte será 60% de tamanho, significa 60% dos 16px
+    que dará 9,6px;
+  */
+  font-size: 60%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100vh;
+}
+
+body {
+  background: var(--color-background);
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body,
+input,
+button,
+textarea {
+  /*
+  O tamanho de fonte rem é um tamanho relativo ao tamanho padrão estabelecido
+  anteriormente pelo :root
+  1rem significa exatamente o tamanho definido no :root
+  1.6rem significa 60% a mais do tamanho definido no :root
+  Sendo assim, caso eu queira mudar o tamanho de fonte em toda a aplicação,
+  basta que eu mude apenas o tamanho do root, e todas as medidas definidas em 
+  rem serão ajustadas relativamente. Sendo assim, o melhor é sempre utilizar esta
+  medida rem como tamanho de fonte.
+  */
+  font: 500 1.6rem Poppins;
+  color: var(--color-text-base);
+}
+
+.container {
+  /*
+  Medida vw. Significa 90% do viewport da aplicação.
+  */
+  width: 90vw;
+  /*
+  Definindo o tamanho máximo com o max-width, o tamanho será 90% do viewport
+  contanto que esses 90% não ultrapassem 700px
+  */
+  max-width: 700px;
+}
+
+/* 
+Para dispositivos com uma largura de no mínimo 700px ,vamos aumentar um
+pouco o tamanho da tela. 
+*/
+@media (min-width: 700px) {
+  :root {
+    font-size: 62.5%;
+  }
+}
